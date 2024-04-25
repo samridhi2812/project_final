@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/815d5311a8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ffc996;
+            font-family: 'Cinzel', serif;
+        }
+
+        .heading {
+            background-image: url(https://wallpaperaccess.com/full/1462400.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 15rem;
+            width: 100%;
+            opacity: 0.8;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .faq {
+            text-align: center;
+            padding: 2rem;
+            color: #fff;
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+            font-size: 3rem;
+        }
+
+        .parent {
+            max-width: 800px;
+            margin: auto;
+            margin-top: 2rem;
+        }
+
+        .ques {
+            background: #ffe9d6;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .child {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .ans {
+            background: #fff;
+            margin-top: 0.5rem;
+            padding: 1rem;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .rot {
+            transform: rotate(180deg);
+        }
+        .logo
+        {
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <a href="Homepage.html" class="logo">
+<div class="heading">
+    <h1 class="faq">FREQUENTLY ASKED QUESTIONS!</h1>
+</div>
+</a>
+
+<div class="parent">
+    <div class="ques" onclick="toggleAnswer(0)">
+        <div class="child"><b>What payment methods do you accept?</b><i class="fas fa-chevron-down"></i></div>
+        <div class="ans">We accept payment through credit card, debit card, and other online payment gateways. Cash on Delivery is also available! :)</div>
+    </div>
+    <div class="ques" onclick="toggleAnswer(1)">
+        <div class="child"><b>How many days prior to the event should I place an order?</b><i class="fas fa-chevron-down"></i></div>
+        <div class="ans">You should place it 3-4 weeks before the event. Or you may place it even before that. The earlier, the better!</div>
+    </div>
+    <div class="ques" onclick="toggleAnswer(2)">
+        <div class="child"><b>Do you make eggless cakes?</b><i class="fas fa-chevron-down"></i></div>
+        <div class="ans">Yes, we make eggless cakes as well. Along with cakes, we have eggless pastries, breads, donuts, etc. as well!</div>
+    </div>
+    <div class="ques" onclick="toggleAnswer(3)">
+        <div class="child"><b>What all items do you make?</b><i class="fas fa-chevron-down"></i></div>
+        <div class="ans">We make cakes, pastries, cupcakes, cookies, donuts, waffles, breads, and many more items. You can refer to them in the items section on the home page of our website. Happy treats! :)</div>
+    </div>
+    <div class="ques" onclick="toggleAnswer(4)">
+        <div class="child"><b>Do you take care of the hygiene while preparing the items?</b><i class="fas fa-chevron-down"></i></div>
+        <div class="ans">Yes! Hygiene is our first priority. We take great care of it while preparing the items.</div>
+    </div>
+</div>
+
+<script>
+    function toggleAnswer(index) {
+        const answer = document.querySelectorAll('.ans')[index];
+        const arrow = document.querySelectorAll('.child i')[index];
+        if (answer.style.display === 'none' || answer.style.display === '') {
+            answer.style.display = 'block';
+            arrow.classList.add('rot');
+        } else {
+            answer.style.display = 'none';
+            arrow.classList.remove('rot');
+        }
+    }
+</script>
+</body>
+</html>
